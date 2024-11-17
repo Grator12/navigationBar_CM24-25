@@ -63,26 +63,17 @@ body {
       justify-content: center;
       gap: 12px;
     }
-
-
+    
     &__item {
-
-
       &__label {
         min-height: 56px;
         display: flex;
         align-items: center;
         @include typography.title-small;
-
-
       }
 
-
       &__list {
-
-
         margin: 0;
-
         @media ($breakpoint-phone<=width<$breakpoint-tablet) {
           gap: 12px;
         }
@@ -99,12 +90,10 @@ body {
     &__button {
       display: flex;
       align-items: center;
-
       border-radius: 100px;
       cursor: pointer;
       position: relative;
       isolation: isolate;
-
 
       &:hover {
         --_state-layer-opacity: .08;
@@ -122,15 +111,12 @@ body {
         --_state-layer-opacity: 0;
         --active-bg: var(--md-sys-color-secondary-container);
 
-
         &::after {
           @media (width>=$breakpoint-tablet) {
             content: attr(data-count);
 
           }
-
         }
-
       }
 
       &__icon {
@@ -158,7 +144,6 @@ body {
     display: flex;
     flex-direction: column;
     gap: 1em;
-
 
     &__item {
       border: 1px solid var(--md-sys-color-on-secondary-container);

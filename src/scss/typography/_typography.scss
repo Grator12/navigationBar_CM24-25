@@ -7,17 +7,29 @@ $typography-map: (
                 "letter-spacing": 0.1px,
                 "weight": 600
         ),
-        "label-medium-promient": (
+        "label-large": (
                 "line-height": 20px,
                 "size": 0.875em,
                 "letter-spacing": 0.1px,
-                "weight": 600
+                "weight": 500
         ),
-        "title-small": (
+        "label-medium-promient": (
                 "line-height": 16px,
                 "size": 0.75em,
                 "letter-spacing": 0.5px,
                 "weight": 600
+        ),
+        "label-medium": (
+                "line-height": 16px,
+                "size": 0.75em,
+                "letter-spacing": 0.5px,
+                "weight": 500
+        ),
+        "title-small": (
+                "line-height": 20px,
+                "size": 0.75em,
+                "letter-spacing": 0.1px,
+                "weight": 500
         ),
 );
 
@@ -35,8 +47,16 @@ $typography-map: (
   @include _apply-font("label-large-promient");
 }
 
+@mixin label-large {
+  @include _apply-font("label-large");
+}
+
 @mixin label-medium-promient {
   @include _apply-font("label-medium-promient");
+}
+
+@mixin label-medium {
+  @include _apply-font("label-medium");
 }
 
 @mixin title-small {

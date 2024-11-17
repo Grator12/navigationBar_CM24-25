@@ -2,8 +2,6 @@
 @use "../typography";
 
 @mixin tablet() {
-  //  @layer tablet {
-
 
   @media (width>=variables.$breakpoint-tablet) {
     .navbar {
@@ -21,10 +19,11 @@
       &__button {
         gap: 12px;
         padding-inline: 16px;
-        @include typography.label-large-promient;
+        @include typography.label-large;
 
         &.active {
           background-color: var(--active-bg);
+          @include typography.label-large-promient;
         }
       }
     }
@@ -43,8 +42,11 @@
       &__button {
         gap: 4px;
         flex-direction: column;
-        @include typography.label-medium-promient;
+        @include typography.label-medium;
 
+        &__active {
+          @include typography.label-medium-promient;
+        }
 
         &__icon {
           height: 32px;
@@ -61,6 +63,5 @@
       }
     }
   }
-  //}
 
 }
