@@ -1,0 +1,44 @@
+@use "sass:map";
+
+$typography-map: (
+        "label-large-promient": (
+                "line-height": 20px,
+                "size": 0.875em,
+                "letter-spacing": 0.1px,
+                "weight": 600
+        ),
+        "label-medium-promient": (
+                "line-height": 20px,
+                "size": 0.875em,
+                "letter-spacing": 0.1px,
+                "weight": 600
+        ),
+        "title-small": (
+                "line-height": 16px,
+                "size": 0.75em,
+                "letter-spacing": 0.5px,
+                "weight": 600
+        ),
+);
+
+@mixin _apply-font($font-name) {
+  $font-map: map.get($typography-map, $font-name);
+
+  font-size: map.get($font-map, "size");
+  font-weight: map.get($font-map, "weight");
+  letter-spacing: map.get($font-map, "letter-spacing");
+  line-height: map.get($font-map, "line-height");
+}
+
+
+@mixin label-large-promient {
+  @include _apply-font("label-large-promient");
+}
+
+@mixin label-medium-promient {
+  @include _apply-font("label-medium-promient");
+}
+
+@mixin title-small {
+  @include _apply-font("title-small");
+}
