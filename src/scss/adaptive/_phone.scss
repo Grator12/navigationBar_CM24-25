@@ -51,7 +51,14 @@
         }
       }
     }
+    .navigation-list {
 
+      &__button {
+        &__icon {
+          width: 64px;
+        }
+      }
+    }
     .content-container {
       padding-bottom: 92px;
     }

@@ -63,72 +63,26 @@ body {
       justify-content: center;
       gap: 12px;
     }
-    //@media (width>=$breakpoint-tablet) {
-    //  width: 360px;
-    //
-    //}
-    //@media (width<$breakpoint-phone) {
-    //  height: 80px;
-    //  width: 100dvw;
-    //  top: unset;
-    //  padding: 0;
-    //  padding-inline: 8px;
-    //  position: fixed;
-    //  bottom: 0;
-    //  overflow-x: auto;
-    //  align-items: center;
-    //  scroll-snap-type: x mandatory;
-    //  gap: 8px;
-    //  min-width: 340px;
-    //  display: -webkit-box;
-    //}
-    @media (width>=$breakpoint-phone) {
-      display: flex;
-      flex-direction: column;
-      max-width: 360px;
-    }
+
 
     &__item {
-      //@media (width<$breakpoint-phone) {
-      //  width: 100%;
-      //}
+
 
       &__label {
         min-height: 56px;
         display: flex;
         align-items: center;
         @include typography.title-small;
-        //@media (width>=$breakpoint-tablet) {
-        //  padding-inline: 16px;
-        //}
-        //@media (width<$breakpoint-tablet) {
-        //  display: none;
-        //}
+
 
       }
 
-      //@media (width>=$breakpoint-phone) {
-      //  &:not(:last-child) {
-      //    border-bottom: 1px solid var(--md-sys-color-outline-variant);
-      //  }
-      //}
 
       &__list {
 
 
         margin: 0;
-        //@media (width>=$breakpoint-phone) {
-        //  display: grid;
-        //  grid-auto-rows: 56px;
-        //  grid-auto-flow: row;
-        //}
-        //@media (width<$breakpoint-phone) {
-        //  //grid-auto-columns: min-content;
-        //  //grid-auto-flow: column;
-        //  display: flex;
-        //  justify-content: space-around;;
-        //  gap: 8px;
-        //}
+
         @media ($breakpoint-phone<=width<$breakpoint-tablet) {
           gap: 12px;
         }
@@ -151,16 +105,6 @@ body {
       position: relative;
       isolation: isolate;
 
-      //@media (width<$breakpoint-tablet) {
-      //  gap: 4px;
-      //  flex-direction: column;
-      //  @include typography.label-medium-promient;
-      //}
-      //@media (width>=$breakpoint-tablet) {
-      //  gap: 12px;
-      //  padding-inline: 16px;
-      //  @include typography.label-large-promient;
-      //}
 
       &:hover {
         --_state-layer-opacity: .08;
@@ -177,9 +121,6 @@ body {
         color: var(--md-sys-color-on-secondary-container);
         --_state-layer-opacity: 0;
         --active-bg: var(--md-sys-color-secondary-container);
-        //@media (width>=$breakpoint-tablet) {
-        //  background-color: var(--active-bg);
-        //}
 
 
         &::after {
@@ -195,29 +136,6 @@ body {
       &__icon {
         flex-shrink: 0;
         display: flex;
-        @media (width<$breakpoint-tablet) {
-          //@media (width>=$breakpoint-tablet) {
-          //  width: 56px;
-          //}
-          // -------???
-          // @media (width<$breakpoint-tablet) {
-          width: 64px;
-          //}
-          //height: 32px;
-          //display: flex;
-          //align-content: center;
-          //justify-content: center;
-          //align-items: center;
-          //background-color: var(--active-bg);
-          //border-radius: 100px;
-          //position: relative;
-          //isolation: isolate;
-        }
-
-        //&:hover {
-        //  --_state-layer-opacity: .08;
-        //  --icon-fill: 1;
-        //}
 
 
         &::before {
@@ -240,9 +158,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 1em;
-    //@media (width<$breakpoint-phone) {
-    //  padding-bottom: 80px;
-    //}
+
 
     &__item {
       border: 1px solid var(--md-sys-color-on-secondary-container);
