@@ -1,12 +1,13 @@
 @use "scss/typography";
 @forward "scss/theme";
 @use "scss/adaptive/phone";
-@use "scss/adaptive";
+@use "scss/adaptive/tablet";
+@use "scss/adaptive/variables";
 @import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
 
-$breakpoint-tablet: 1000px;
-$breakpoint-phone: 600px;
+$breakpoint-tablet: variables.$breakpoint-tablet;
+$breakpoint-phone: variables.$breakpoint-phone;
 
 
 html, body {
@@ -16,7 +17,7 @@ html, body {
 @layer main, tablet, phone;
 
 @layer tablet {
-  @include adaptive.tablet;
+  @include tablet.tablet;
 }
 
 @layer phone {
@@ -63,7 +64,7 @@ body {
       justify-content: center;
       gap: 12px;
     }
-    
+
     &__item {
       &__label {
         min-height: 56px;
