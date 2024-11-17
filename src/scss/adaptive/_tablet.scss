@@ -1,0 +1,74 @@
+@use "variables";
+@use "../typography";
+
+@mixin tablet() {
+  //  @layer tablet {
+
+
+  @media (width>=variables.$breakpoint-tablet) {
+    .navbar {
+      width: 360px;
+
+      &__item {
+        &__label {
+          padding-inline: 16px;
+        }
+      }
+    }
+
+    .navigation-list {
+
+      &__button {
+        gap: 12px;
+        padding-inline: 16px;
+        @include typography.label-large-promient;
+
+        &.active {
+          background-color: var(--active-bg);
+        }
+      }
+    }
+  }
+
+  .navbar {
+    &__item {
+      &__label {
+        display: none;
+      }
+    }
+  }
+
+  @media (width<variables.$breakpoint-tablet) {
+    .navbar {
+      &__item {
+        &__label {
+          display: none;
+        }
+      }
+    }
+
+    .navigation-list {
+
+      &__button {
+        gap: 4px;
+        flex-direction: column;
+        @include typography.label-medium-promient;
+
+
+        &__icon {
+          height: 32px;
+          display: flex;
+          align-content: center;
+          justify-content: center;
+          align-items: center;
+          background-color: var(--active-bg);
+          border-radius: 100px;
+          position: relative;
+          isolation: isolate;
+        }
+      }
+    }
+  }
+  //}
+
+}

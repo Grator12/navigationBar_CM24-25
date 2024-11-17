@@ -1,0 +1,61 @@
+@use "variables";
+@use "../typography";
+
+@mixin phone() {
+  @media (width>=variables.$breakpoint-phone) {
+    .navbar {
+      display: flex;
+      flex-direction: column;
+      max-width: 360px;
+
+      &__item {
+        &:not(:last-child) {
+          border-bottom: 1px solid var(--md-sys-color-outline-variant);
+        }
+
+        &__list {
+          display: grid;
+          grid-auto-rows: 56px;
+          grid-auto-flow: row;
+        }
+      }
+    }
+  }
+
+
+  @media (width<variables.$breakpoint-phone) {
+    .navbar {
+      height: 80px;
+      width: 100dvw;
+      top: unset;
+      padding: 0;
+      padding-inline: 8px;
+      position: fixed;
+      bottom: 0;
+      overflow-x: auto;
+      align-items: center;
+      scroll-snap-type: x mandatory;
+      gap: 8px;
+      min-width: 340px;
+      display: -webkit-box;
+
+      &__item {
+        width: 100%;
+
+        &__list {
+          //grid-auto-columns: min-content;
+          //grid-auto-flow: column;
+          display: flex;
+          justify-content: space-around;;
+          gap: 8px;
+        }
+      }
+    }
+
+    .content-container {
+      padding-bottom: 92px;
+    }
+  }
+
+
+}
