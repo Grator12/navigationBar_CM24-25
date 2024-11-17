@@ -3,27 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <title>navigationBar25</title>
+
+
 </head>
 <body>
-<nav class="sidebar">
-    <ul class="">
-        <li class="active">
-            <a href="index.html" class="">
-                <span class="">Hom</span>
-            </a>
-        </li>
-        <li>
-            <a href="mail.html" class="">
-                <span class="">Mail</span>
-            </a>
-        </li>
-        <li>
-            <a href="calendar.html" class="">
-                <span class="">Calendar</span>
-            </a>
-        </li>
-    </ul>
+
+<nav class="navbar">
+    <div class="navbar__item">
+        <div class="navbar__item__label">Mail</div>
+        <ul class="navbar__item__list navigation-list">
+
+            <li class="navigation-list__button">
+                <span class="material-symbols-outlined navigation-list__button__icon"> inbox </span>
+                <span class="navigation-list__button__label">Inbox</span>
+
+            </li>
+            <li class="navigation-list__button active">
+                <div class="navigation-list__button__icon">
+                    <span class="material-symbols-outlined ">send</span>
+                </div>
+                <span class="navigation-list__button__label">Home</span>
+            </li>
+            <li class="navigation-list__button">
+                <span class="material-symbols-outlined navigation-list__button__icon"> favorite </span>
+                <span class="navigation-list__button__label">Favorites</span>
+            </li>
+            <li class="navigation-list__button">
+                <span class="material-symbols-outlined navigation-list__button__icon"> delete </span>
+                <span class="navigation-list__button__label">Trash</span>
+            </li>
+        </ul>
+    </div>
+    <div class="navbar__item">
+        <div class="navbar__item__label">Label</div>
+        <ul class="navbar__item__list navigation-list">
+
+            <li class="navigation-list__button">
+                <span class="material-symbols-outlined navigation-list__button__icon"> inventory_2 </span>
+                <span class="navigation-list__button__label">Label</span>
+            </li>
+            <li class="navigation-list__button">
+                <span class="material-symbols-outlined navigation-list__button__icon">inventory_2</span>
+                <span class="navigation-list__button__label">Label</span>
+
+            </li>
+            <li class="navigation-list__button">
+                <span class="material-symbols-outlined navigation-list__button__icon"> inventory_2 </span>
+                <span class="navigation-list__label">Label</span>
+            </li>
+            <li class="navigation-list__button">
+                <span class="material-symbols-outlined navigation-list__button__icon"> inventory_2 </span>
+                <span class="navigation-list__button__label">Label</span>
+
+            </li>
+        </ul>
+    </div>
 </nav>
-<main class="content-container"></main>
+<main class="content-container">
+    <div class="content-container__item">
+        <div class="content-container__item__label"><h2 class="">Home page</h2></div>
+        <div class="content-container__item__text">
+            <p class="">Добро пожаловать на наш сайт!</p>
+            <p class="">Мы рады видеть вас здесь! Как прошел ваш день? Надеемся, он был полон приятных моментов.</p>
+            <p class="">Если у вас есть какие-либо вопросы или идеи, как мы можем сделать ваш опыт лучше, не стесняйтесь
+                делиться ими.</p>
+            <p class="">Желаем вам приятного времяпрепровождения! :)</p>
+        </div>
+    </div>
+    <div class="content-container__item">
+        <div class="content-container__item__label"><h2 class="">Lorem ipsum.</h2></div>
+        <div class="content-container__item__text">
+            <p class="">Lorem ipsum dolor sit.</p>
+            <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi assumenda consequatur cumque
+                dolorum facilis illo odit quae, quaerat reiciendis veritatis.</p>
+            <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat inventore laborum optio quae
+                quas soluta ut. Cum ex fugiat maiores natus vitae. Debitis in minus optio saepe sapiente, vero
+                voluptates!</p>
+            <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus accusantium adipisci
+                asperiores dolorem eaque est ex illo ipsa iure iusto laborum laudantium libero non odio, perferendis quo
+                ratione rem reprehenderit repudiandae, rerum sapiente, sequi soluta sunt suscipit tenetur ut
+                voluptate?</p>
+        </div>
+    </div>
+</main>
 </body>
 </html>
