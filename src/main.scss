@@ -3,6 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
 
 $breakpoint-tablet: 1000px;
+$breakpoint-phone: 600px;
 html,
 body {
   margin: 0;
@@ -41,14 +42,30 @@ body {
   align-self: start;
   overflow: hidden;
   padding: 12px;
-  max-width: 360px;
   min-width: 80px;
   display: flex;
-  flex-direction: column;
   gap: 12px;
+  @media ($breakpoint-phone<width<$breakpoint-tablet) {
+    justify-content: center;
+  }
+  @media (width<$breakpoint-phone) {
+    height: 80px;
+    width: 100dvw;
+    top: unset;
+    padding: 0;
+    padding-inline: 8px;
+    position: fixed;
+    bottom: 0;
+    overflow-x: auto;
+    align-items: center;
+    scroll-snap-type: x mandatory;
+  }
+  @media (width>=$breakpoint-phone) {
+    flex-direction: column;
+    max-width: 360px;
+  }
 
   &__item {
-    --_row-height: 56px;
 
     &__label {
       min-height: 56px;
@@ -63,15 +80,25 @@ body {
 
     }
 
-    &:not(:last-child) {
-      border-bottom: 1px solid var(--md-sys-color-outline-variant);
+    @media (width>=$breakpoint-phone) {
+      &:not(:last-child) {
+        border-bottom: 1px solid var(--md-sys-color-outline-variant);
+      }
     }
 
     &__list {
       display: grid;
-      grid-auto-rows: 56px;
+
       margin: 0;
-      @media (width<=$breakpoint-tablet) {
+      @media (width>=$breakpoint-phone) {
+        grid-auto-rows: 56px;
+        grid-auto-flow: row;
+      }
+      @media (width<$breakpoint-phone) {
+        grid-auto-columns: min-content;
+        grid-auto-flow: column;
+      }
+      @media (width<$breakpoint-tablet) {
         gap: 12px;
       }
     }
@@ -128,7 +155,12 @@ body {
     &__icon {
       flex-shrink: 0;
       @media (width<$breakpoint-tablet) {
-        width: 56px;
+        @media (width>=$breakpoint-tablet) {
+          width: 56px;
+        }
+        @media (width<$breakpoint-tablet) {
+          width: 64px;
+        }
         height: 32px;
         display: flex;
         align-content: center;
