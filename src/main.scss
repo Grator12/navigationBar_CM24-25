@@ -4,11 +4,22 @@
 @use "scss/adaptive/tablet";
 @use "scss/adaptive/variables";
 @import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap");
 
 $breakpoint-tablet: variables.$breakpoint-tablet;
 $breakpoint-phone: variables.$breakpoint-phone;
 
+
+@mixin beforeForHover() {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: var(--_state-layer-opacity, 0);
+  background-color: currentColor;
+  z-index: -1;
+  transition: 0.3s opacity;
+  border-radius: inherit;
+}
 
 html, body {
   margin: 0;
@@ -37,16 +48,6 @@ body {
   box-sizing: border-box;
 }
 
-@mixin beforeForHover() {
-  content: '';
-  position: absolute;
-  inset: 0;
-  opacity: var(--_state-layer-opacity, 0);
-  background-color: currentColor;
-  z-index: -1;
-  transition: 0.3s opacity;
-  border-radius: inherit;
-}
 
 @layer main {
   .navbar {

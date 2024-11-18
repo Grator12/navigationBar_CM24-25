@@ -43,8 +43,6 @@
         width: 100%;
 
         &__list {
-          //grid-auto-columns: min-content;
-          //grid-auto-flow: column;
           display: flex;
           justify-content: space-around;;
           gap: 8px;

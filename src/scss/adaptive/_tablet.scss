@@ -44,7 +44,7 @@
         flex-direction: column;
         @include typography.label-medium;
 
-        &__active {
+        &.active {
           @include typography.label-medium-promient;
         }
 
